@@ -1,0 +1,45 @@
+clientsdk.ribbon.listOfServers: localhost:8080
+
+feign.client.config.default.readTimeout: 3000
+feign.client.config.default.connectTimeout: 3000
+
+logging:
+  level:
+    com.test.controller: debug
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+
+log4j.logger.com.ibatis: debug
+log4j.logger.com.ibatis.common.jdbc.SimpleDataSource: debug
+log4j.logger.com.ibatis.common.jdbc.ScriptRunner: debug
+log4j.logger.com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate: debug
+log4j.logger.java.sql.Connection: debug
+log4j.logger.java.sql.Statement: debug
+log4j.logger.java.sql.PreparedStatement: debug
+log4j.logger.com.founder.centerbusiness: debug
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      platform: mysql
+      url: jdbc:mysql://172.18.30.36:3308/deveaupstand?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai
+      username: deveaupstand
+      password: deveaupstand
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      filters: stat
+      logSlowSql: true

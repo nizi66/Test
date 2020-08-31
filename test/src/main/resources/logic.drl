@@ -1,0 +1,37 @@
+package com.logic
+import com.test.vo.Refuse
+global java.util.Map refuseDate
+
+rule "baseMessage"
+	no-loop true
+	lock-on-active true
+	salience 1
+	when
+		$re:Refuse(age>=60||age<22)
+	then
+		System.out.println("rrrrrrrrrrrrr==="+refuseDate);
+		refuseDate.put("name","0");
+end
+
+
+rule "baseMessage2"
+	no-loop true
+	lock-on-active true
+	salience 1
+	when
+		$re:Refuse(age>=60||age<22)
+	then
+		System.out.println("ccccccccc==="+refuseDate);
+		refuseDate.put("name","ggggg");
+end
+
+rule "baseMessage1"
+	no-loop true
+	lock-on-active true
+	salience 1
+	when
+		Refuse(age<60&&age>=22)
+	then
+		refuseDate.put("name","0");
+		System.out.println("hello=======     ");
+end

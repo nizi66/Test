@@ -1,0 +1,7 @@
+com\test\controller\ThreadPoolController.class
+com\test\feignclient\FeignCilentTest.class
+com\test\springtransaction\SpringTransactionMap.class
+com\test\springtransaction\SpringTransaction.class
+com\test\controller\PoolController.class
+com\test\controller\FeignAndRibbonController.class
+com\test\TestApplication.class
